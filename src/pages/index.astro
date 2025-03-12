@@ -6,6 +6,7 @@ import Hero from '../components/Hero.jsx';
 import { Image } from 'astro:assets';
 import matcha from '../assets/matcha-latte.jpg';
 import latte1 from '../assets/latte-1.jpg';
+import vcpodcast from '../assets/vc-podcast-logo.png';
 
 const explainer = `
 Welcome! See what a senior software engineer can do.
@@ -20,8 +21,7 @@ Welcome! See what a senior software engineer can do.
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-8">About Me</h2>
             <p class="text-lg text-center max-w-2xl mx-auto">
-                I am a passionate software engineer specializing in React Native and TypeScript. I thrive on creating intuitive, scalable, and user-friendly
-                mobile solutions. With experience in full-stack development, I’m always eager to tackle challenging projects.
+                I am a passionate software engineer specializing in React Native and TypeScript. I like coffee, running, reading, and my kitty.
             </p>
         </div>
     </section>
@@ -31,7 +31,7 @@ Welcome! See what a senior software engineer can do.
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card bg-base-100 shadow-xl">
                     <figure>
-                        <Image src={matcha} alt="Dev portfolio" />
+                        <Image src={matcha} alt="a matcha latte" />
                     </figure>
                     <div class="card-body">
                         <h3 class="card-title">Dev Portfolio</h3>
@@ -43,7 +43,7 @@ Welcome! See what a senior software engineer can do.
                 </div>
                 <div class="card bg-base-100 shadow-xl">
                     <figure>
-                        <Image src={latte1} alt="Tic Tac Toe" />
+                        <Image src={latte1} alt="latte art" />
                     </figure>
                     <div class="card-body">
                         <h3 class="card-title">Tic Tac Toe</h3>
@@ -53,12 +53,35 @@ Welcome! See what a senior software engineer can do.
                         </div>
                     </div>
                 </div>
-                {/* Add additional project cards as needed */}
             </div>
         </div>
     </section>
-
-    <section id="contact" class="py-16 bg-base-100">
+    <section id="extras" class="py-16 bg-base-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8">Extras</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <Image src={vcpodcast} alt="virtual coffee podcast logo" />
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title">VC Podcast</h3>
+                        <p>An interview with maintainers of the Virtual Coffee community.</p>
+                        <div class="card-actions justify-end">
+                            <a
+                                href="https://virtualcoffee.io/podcast/andrew-bush-mobile-development-and-giving-back-to-community"
+                                target="_blank"
+                                class="btn btn-primary"
+                            >
+                                Listen now!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-16 bg-base-200">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-8">Get In Touch</h2>
             <div class="flex justify-center">
