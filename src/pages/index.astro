@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContextAlert from '../components/ContextAlert.astro';
+import Markdown from '../components/Markdown.astro';
+import Hero from '../components/Hero.jsx';
+import { Image } from 'astro:assets';
+import matcha from '../assets/matcha-latte.jpg';
+import latte1 from '../assets/latte-1.jpg';
+
+const explainer = `
+Welcome! See what a senior software engineer can do.
+`;
+---
+
+<Layout title="Andrew Bush the Dev">
+    <ContextAlert class="mb-4" />
+    <Hero />
+
+    <section id="about" class="py-16 bg-base-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8">About Me</h2>
+            <p class="text-lg text-center max-w-2xl mx-auto">
+                I am a passionate software engineer specializing in React Native and TypeScript. I thrive on creating intuitive, scalable, and user-friendly
+                mobile solutions. With experience in full-stack development, I’m always eager to tackle challenging projects.
+            </p>
+        </div>
+    </section>
+    <section id="projects" class="py-16 bg-base-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <Image src={matcha} alt="Dev portfolio" />
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title">Dev Portfolio</h3>
+                        <p>A website built with React and Astro.js that you are looking at right now.</p>
+                        <div class="card-actions justify-end">
+                            <a href="https://github.com/Andrew-Bush/andrewbush-devsite" target="_blank" class="btn btn-primary"> View Code </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <Image src={latte1} alt="Tic Tac Toe" />
+                    </figure>
+                    <div class="card-body">
+                        <h3 class="card-title">Tic Tac Toe</h3>
+                        <p>A mobile app version of the classic game built with React Native and Expo. Featuring an unbeatable AI.</p>
+                        <div class="card-actions justify-end">
+                            <a href="https://github.com/Andrew-Bush/tictactoe" target="_blank" class="btn btn-primary"> View Code </a>
+                        </div>
+                    </div>
+                </div>
+                {/* Add additional project cards as needed */}
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-base-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-8">Get In Touch</h2>
+            <div class="flex justify-center">
+                <a href="mailto:andrewbush1525@gmail.com" class="btn btn-secondary"> Contact Me </a>
+            </div>
+        </div>
+    </section>
+</Layout>
